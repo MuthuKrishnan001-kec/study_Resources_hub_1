@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Resource Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+     body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #e6f3ff 0%, #f0e6ff 100%);color: #1a1f3a;line-height: 1.6; min-height: 100vh;
+    }
+    .top-bar {
+      position: fixed;top: 0; left: 0; width: 100%; background: #0b4aad;padding: 12px 20px; box-shadow: 0 2px 8px rgba(11, 74, 173, 0.2); display: flex;justify-content: space-between; align-items: center; z-index: 1000;
+    }
+ .hub-title {
+      font-size: 20px; font-weight: 700; color: #ffffff;
+    }
+    .logout {
+      position: static; color: #ffffff; background: #ff6b6b; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 13px;  transition: background 0.2s ease;  border: none;
+    }
+    .logout:hover {
+      background: #ff5252;
+    }
+    main {
+      margin-top: 70px; padding: 40px 20px; max-width: 1200px; margin-left: auto; margin-right: auto;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 20px;
+      background: #f0f8ff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(11, 74, 173, 0.1);
+    }
+    .logo { width: 70px; height: 70px; border-radius: 10px; display: block; margin: 0 auto 15px; box-shadow: 0 2px 6px rgba(11, 74, 173, 0.1);
+    }
+    h1 {
+      font-size: 36px;
+      color: #0b4aad;
+      margin: 12px 0;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 24px;
+      color: #0b4aad;
+      margin: 15px 0;
+      font-weight: 700;
+    }
+    h3 {
+      color: #0b4aad;
+      margin: 12px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    p {
+      margin: 12px 0;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .note {
+      color: #0b4aad;
+      background: #e8f4ff;
+      padding: 10px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .hero-divider {
+      height: 2px;
+      background: #0b4aad;
+      border: none;
+      margin: 20px 0;
+    }
+    .video-section {
+      margin: 50px 0;
+      text-align: center;
+    }
+    video {
+      display: block;
+      margin: 15px auto;
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(11, 74, 173, 0.1);
+    }
+    img:not(.logo):not(.grid-image) {
+      display: block;
+      margin: 15px auto;
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(11, 74, 173, 0.1);
+    }
+    .subjects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 35px 0;
+    }
+    .subject-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(11, 74, 173, 0.1);
+      border: 1px solid #e0e8f1;
+      transition: all 0.2s ease;
+    }
+    .subject-card:hover {
+      box-shadow: 0 2px 8px rgba(11, 74, 173, 0.15);
+    }
+    .subject-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #0f2f6e;
+    }
+    .subject-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 18px;
+    }
+    .subject-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin: 12px 0 0 0;
+    }
+    .subject-card a {
+      color: #0b6ab8;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .subject-card a:hover {
+      color: #0f2f6e;
+      text-decoration: underline;
+    }
+    .quick-links {
+      background: #f0f8ff;
+      padding: 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+      box-shadow: 0 1px 4px rgba(11, 74, 173, 0.08);
+    }
+    ul {
+      list-style: none;
+      max-width: 900px;
+      margin: 15px auto;
+    }
+    li {
+      margin: 10px 0;
+      padding: 10px 12px;
+      background: #ffffff;
+      border-radius: 6px;
+      border-left: 3px solid #0b4aad;
+      transition: all 0.2s ease;
+    }
+    li:hover {
+      background: #ffffff; box-shadow: 0 1px 4px rgba(11, 74, 173, 0.1);
+    }
+    a { color: #0b6ab8; text-decoration: none; font-weight: 500; transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0f2f6e; text-decoration: underline;
+    }
+    table {
+      border-collapse: collapse; margin: 25px auto; background: #ffffff; width: 100%; max-width: 700px; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 4px rgba(11, 74, 173, 0.08);
+    }
+    th {
+      background: #0b4aad; color: #ffffff; padding: 12px; text-align: left; font-weight: 600; font-size: 14px;
+    }
+    td {
+      border-bottom: 1px solid #f0f0f0; padding: 10px 12px;  color: #333; font-size: 14px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .about-section {
+      background: #f0f8ff; padding: 35px 25px; border-radius: 8px; text-align: center; margin: 40px 0; box-shadow: 0 1px 4px rgba(11, 74, 173, 0.08); border: 1px solid #e0e8f1;
+    }
+    .about-section h2 {
+      margin-top: 0; color: #0b4aad;
+    }
+    .profile-img {
+   width: 80px; height: 80px; border-radius: 50%; border: 2px solid #0b4aad; margin-bottom: 15px; object-fit: cover;
+    }
+    .about-section p { max-width: 700px; margin: 14px auto; font-size: 16px; line-height: 1.8; color: #333;
+    }
+    .about-section strong {
+      color: #0f2f6e;
+    }
+    footer {
+      text-align: center; padding: 30px 20px; background: #f0f8ff; border-top: 1px solid #e0e8f1; margin-top: 40px;
+    }
+    .divider {
+      margin: 30px 0;  border: none; height: 1px; background: #e0e8f1;
+    }
+    footer p {
+      margin: 10px 0; color: #333;
+    }
+    footer i {
+      color: #0b6ab8;  font-style: italic;  font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 32px; }  h2 { font-size: 24px; } h3 { font-size: 18px; }
+      .top-bar {
+        padding: 12px 15px;
+      }
+      .hub-title {
+        font-size: 18px;
+      }
+      main {
+        padding: 25px 15px;
+      }
+      .hero {
+        padding: 25px 15px;
+      }
+      .subjects-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .quick-links {
+        padding: 25px;
+      }
+      .about-section {
+        padding: 30px 20px;
+      }
+      table {
+        font-size: 14px;
+      }
+      th, td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span class="hub-title">Study Resource Hub</span>
+    <a class="logout" href="study resource hub login page.html">log out</a>
+  </div>
+  <main>
+    <div class="hero">
+      <img src="generated-image.png" alt="Logo" class="logo">
+      <h1>Study Resource Hub</h1>
+      <h2>Your One‑Stop Solution for College Study Materials</h2>
+      <p><span class="note">🎓 8 Subjects • 100+ Resources • Always Free</span></p>
+      <hr class="hero-divider">
+    </div>
+    <div class="video-section">
+      <img src="generated-image.png" alt="Study Resources" width="400" height="200">
+      <video width="1000" height="420" controls autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h2 style="text-align: center; margin-bottom: 40px;">📖 Explore Subjects</h2>
+    <div class="subjects-container">
+      <div class="subject-card">
+        <h3><a href="python-programming.html">Python Programming</a></h3>
+        <p>Syntax, functions, file handling, and projects.</p>
+        <a href="python-programming.html"><img class="grid-image" src="python-icon.png" alt="Python"></a>
+      </div>
+      <div class="subject-card">
+        <h3><a href="c-programming.html">C Programming</a></h3>
+        <p>Basics, loops, arrays, pointers, and more.</p>
+        <a href="c-programming.html"><img class="grid-image" src="c-programming.png" alt="C Programming"></a>
+      </div>
+      <div class="subject-card">
+        <h3><a href="html-programming.html">HTML & CSS</a></h3>
+        <p>Build your first website step by step.</p>
+        <a href="html-programming.html"><img class="grid-image" src="web-dev.png" alt="Web Development"></a>
+      </div>
+      <div class="subject-card">
+        <h3><a href="math-hub.html">Mathematics Learning Hub</a></h3>
+        <p>Matrices, Calculus, Trigonometry, Geometry, Algebra, and more.</p>
+        <a href="math-hub.html"><img class="grid-image" src="math-icon.png" alt="Mathematics Hub"></a>
+      </div>
+      <div class="subject-card">
+        <h3><a href="https://www.physicsclassroom.com/" target="_blank" rel="noopener noreferrer">Engineering Physics</a></h3>
+        <p>Mechanics, Waves, Optics, Modern Physics.</p>
+        <a href="https://www.physicsclassroom.com/" target="_blank" rel="noopener noreferrer"><img class="grid-image" src="physics-icon.png" alt="Physics"></a>
+      </div>
+
+      <div class="subject-card">
+        <h3><a href="https://www.annauniv.edu/" target="_blank" rel="noopener noreferrer">Previous Year Question Papers</a></h3>
+        <p>Download solved papers for all subjects.</p>
+        <a href="https://www.annauniv.edu/" target="_blank" rel="noopener noreferrer"><img class="grid-image" src="question-bank.png" alt="Question Papers"></a>
+      </div>
+      <div class="subject-card">
+        <h3><a href="https://www.youtube.com/@freecodecamp" target="_blank" rel="noopener noreferrer">Free YouTube Tutorials</a></h3>
+        <p>CodeWithHarry, FreeCodeCamp, GeeksForGeeks.</p>
+        <a href="https://www.youtube.com/@freecodecamp" target="_blank" rel="noopener noreferrer"><img class="grid-image" src="youtube-learning.png" alt="YouTube Tutorials"></a>
+      </div>
+      <div class="subject-card">
+        <h3><a href="https://education.github.com/pack" target="_blank" rel="noopener noreferrer">GitHub Student Developer Pack</a></h3>
+        <p>Free tools, cloud credits, and learning resources.</p>
+        <a href="https://education.github.com/pack" target="_blank" rel="noopener noreferrer"><img class="grid-image" src="github-student.png" alt="GitHub Student Pack"></a>
+      </div>
+    </div>
+    <div class="quick-links">
+      <h2> Quick Links</h2>
+      <ul>
+        <li><a href="c-programming.html">C Programming – Notes & Tutorials</a></li>
+        <li><a href="python-programming.html">Python – Beginner to Advanced</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">HTML & CSS – Web Development</a></li>
+        <li><a href="https://www.khanacademy.org/math" target="_blank" rel="noopener noreferrer">Engineering Mathematics – Lectures</a></li>
+        <li><a href="https://www.physicsclassroom.com/" target="_blank" rel="noopener noreferrer">Engineering Physics – Notes & Practice</a></li>
+        <li><a href="https://www.annauniv.edu/" target="_blank" rel="noopener noreferrer">Previous Year Question Papers</a></li>
+        <li><a href="https://www.youtube.com/@freecodecamp" target="_blank" rel="noopener noreferrer">Free YouTube Tutorials</a></li>
+        <li><a href="https://education.github.com/pack" target="_blank" rel="noopener noreferrer">GitHub Student Developer Pack</a></li>
+      </ul>
+    </div>
+    <h2 style="text-align: center; margin: 50px 0 30px 0;"> Contact</h2>
+    <table>
+      <tr>
+        <th colspan="3" style="text-align: center;">Resource Hub Contact Info</th>
+      </tr>
+      <tr>
+        <th rowspan="2">For Contact</th>
+        <td><a href="tel:123456789">123456789</a></td>
+        <td><a href="tel:987654321">987654321</a></td>
+      </tr>
+<tr>
+        <td> Email Support</td>
+        <td><a href="mailto:muthub.2102@gmail.com">muthub.2102@gmail.com</a></td>
+      </tr>
+    </table>
+    <hr class="divider">
+    <section class="about-section">
+      <h2> About Me</h2>
+      <img src="profile.png" alt="Profile" class="profile-img">
+      <p><strong>Hi, I'm Muthu!</strong> I built and maintain Study Resource Hub on my own, so every page and resource comes from my personal dedication. My goal is to give all students simple, free access to the materials I wish I had when I started engineering. Thank you for supporting this project!</p>
+      <p style="color: #0b4aad; font-size: 15px; margin-top: 20px;">If you have any suggestions or want to connect, email me anytime at <a href="mailto:muthub.2102@gmail.com">muthub.2102@gmail.com</a></p>
+    </section>
+    <hr class="divider">
+  </main>
+  <footer>
+    <p>For queries or suggestions: <a href="mailto:muthub.2102@gmail.com">muthub.2102@gmail.com</a></p>
+    <p>Connect with us on <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    <p style="margin-top: 25px;"><i> Keep learning, keep growing! </i></p>
+  </footer>
+</body>
+</html>

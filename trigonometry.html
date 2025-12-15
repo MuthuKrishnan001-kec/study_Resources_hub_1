@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Trigonometry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 18px;
+            margin-bottom: 12px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content ul, .content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .example {
+            background: #f0f4ff;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .example strong {
+            color: #667eea;
+        }
+
+        .formula {
+            background: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #ffb347;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .formula strong {
+            color: #ff6b6b;
+        }
+
+        .tip {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .tip strong {
+            color: #2e7d32;
+        }
+
+        nav {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 5px;
+            background: #f0f4ff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            overflow-x: auto;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="math-hub.html" class="back-link">← Back to Math Hub</a>
+
+        <header>
+            <h1>▲ Basics of Trigonometry</h1>
+            <p>Understanding Trigonometric Functions, Identities, and Applications</p>
+        </header>
+
+        <nav>
+            <h3>Quick Navigation</h3>
+            <a href="#introduction">Introduction</a>
+            <a href="#ratios">Ratios</a>
+            <a href="#functions">Functions</a>
+            <a href="#identities">Identities</a>
+            <a href="#examples">Examples</a>
+        </nav>
+
+        <div class="content">
+            <h2 id="introduction">1. Introduction to Trigonometry</h2>
+            <p>Trigonometry is the study of relationships between angles and sides of triangles. The word comes from "trigon" (triangle) and "metry" (measurement). It has applications in physics, engineering, navigation, and many other fields.</p>
+
+            <div class="tip">
+                <strong>Key Concept:</strong> Trigonometry relates angles to ratios of sides in right triangles.
+            </div>
+
+            <h2>2. Right Triangle Basics</h2>
+            <p>In a right triangle, the three sides are:</p>
+            <ul>
+                <li><strong>Hypotenuse:</strong> The longest side, opposite the right angle</li>
+                <li><strong>Opposite:</strong> The side opposite to the angle of interest</li>
+                <li><strong>Adjacent:</strong> The side next to the angle of interest (not the hypotenuse)</li>
+            </ul>
+
+            <div class="tip">
+                <strong>Pythagorean Theorem:</strong> a² + b² = c²
+                <br>where c is the hypotenuse and a, b are the other sides.
+            </div>
+
+            <h2 id="ratios">3. Trigonometric Ratios</h2>
+            <p>For a right triangle with angle θ (theta), the primary trigonometric ratios are:</p>
+
+            <div class="formula">
+                <strong>sin(θ) = Opposite / Hypotenuse</strong>
+                <br><strong>cos(θ) = Adjacent / Hypotenuse</strong>
+                <br><strong>tan(θ) = Opposite / Adjacent</strong>
+            </div>
+
+            <div class="tip">
+                <strong>Memory Aid: SOHCAHTOA</strong>
+                <br>Sine = Opposite/Hypotenuse
+                <br>Cosine = Adjacent/Hypotenuse
+                <br>Tangent = Opposite/Adjacent
+            </div>
+
+            <h3>Reciprocal Trigonometric Functions</h3>
+            <div class="formula">
+                <strong>csc(θ) = 1/sin(θ) = Hypotenuse / Opposite</strong>
+                <br><strong>sec(θ) = 1/cos(θ) = Hypotenuse / Adjacent</strong>
+                <br><strong>cot(θ) = 1/tan(θ) = Adjacent / Opposite</strong>
+            </div>
+
+            <h3>Special Angles</h3>
+            <table>
+                <tr>
+                    <th>Angle (θ)</th>
+                    <th>sin(θ)</th>
+                    <th>cos(θ)</th>
+                    <th>tan(θ)</th>
+                </tr>
+                <tr>
+                    <td>0°</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>30°</td>
+                    <td>1/2</td>
+                    <td>√3/2</td>
+                    <td>1/√3</td>
+                </tr>
+                <tr>
+                    <td>45°</td>
+                    <td>√2/2</td>
+                    <td>√2/2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>60°</td>
+                    <td>√3/2</td>
+                    <td>1/2</td>
+                    <td>√3</td>
+                </tr>
+                <tr>
+                    <td>90°</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>Undefined</td>
+                </tr>
+            </table>
+
+            <h2 id="functions">4. Trigonometric Functions</h2>
+            <p>Trigonometric functions are periodic functions defined for all real numbers (in radians or degrees).</p>
+
+            <h3>Sine Function: y = sin(x)</h3>
+            <ul>
+                <li>Domain: All real numbers</li>
+                <li>Range: [-1, 1]</li>
+                <li>Period: 2π radians (360°)</li>
+                <li>Odd function: sin(-x) = -sin(x)</li>
+            </ul>
+
+            <h3>Cosine Function: y = cos(x)</h3>
+            <ul>
+                <li>Domain: All real numbers</li>
+                <li>Range: [-1, 1]</li>
+                <li>Period: 2π radians (360°)</li>
+                <li>Even function: cos(-x) = cos(x)</li>
+            </ul>
+
+            <h3>Tangent Function: y = tan(x)</h3>
+            <ul>
+                <li>Domain: All real numbers except x = π/2 + nπ</li>
+                <li>Range: All real numbers</li>
+                <li>Period: π radians (180°)</li>
+                <li>Odd function: tan(-x) = -tan(x)</li>
+            </ul>
+
+            <h2 id="identities">5. Trigonometric Identities</h2>
+
+            <h3>Fundamental Identities</h3>
+            <div class="formula">
+                <strong>Pythagorean Identities:</strong>
+                <br>sin²(θ) + cos²(θ) = 1
+                <br>1 + tan²(θ) = sec²(θ)
+                <br>1 + cot²(θ) = csc²(θ)
+            </div>
+
+            <h3>Sum and Difference Formulas</h3>
+            <div class="formula">
+                <strong>sin(A ± B) = sin(A)cos(B) ± cos(A)sin(B)</strong>
+                <br><strong>cos(A ± B) = cos(A)cos(B) ∓ sin(A)sin(B)</strong>
+                <br><strong>tan(A ± B) = (tan(A) ± tan(B)) / (1 ∓ tan(A)tan(B))</strong>
+            </div>
+
+            <h3>Double Angle Formulas</h3>
+            <div class="formula">
+                <strong>sin(2θ) = 2sin(θ)cos(θ)</strong>
+                <br><strong>cos(2θ) = cos²(θ) - sin²(θ) = 2cos²(θ) - 1 = 1 - 2sin²(θ)</strong>
+                <br><strong>tan(2θ) = 2tan(θ) / (1 - tan²(θ))</strong>
+            </div>
+
+            <h3>Half Angle Formulas</h3>
+            <div class="formula">
+                <strong>sin(θ/2) = ±√[(1 - cos(θ)) / 2]</strong>
+                <br><strong>cos(θ/2) = ±√[(1 + cos(θ)) / 2]</strong>
+                <br><strong>tan(θ/2) = sin(θ) / (1 + cos(θ)) = (1 - cos(θ)) / sin(θ)</strong>
+            </div>
+
+            <h2 id="examples">6. Solved Examples</h2>
+
+            <h3>Example 1: Finding Trigonometric Ratios</h3>
+            <div class="example">
+                <strong>In a right triangle, the opposite side is 3 and the hypotenuse is 5. Find sin(θ), cos(θ), and tan(θ).</strong>
+                <br><br><strong>Solution:</strong>
+                <br>First, find the adjacent side using Pythagorean theorem:
+                <br>a² + 3² = 5²
+                <br>a² = 25 - 9 = 16
+                <br>a = 4
+                <br><br>sin(θ) = 3/5 = 0.6
+                <br>cos(θ) = 4/5 = 0.8
+                <br>tan(θ) = 3/4 = 0.75
+            </div>
+
+            <h3>Example 2: Using Pythagorean Identity</h3>
+            <div class="example">
+                <strong>If sin(θ) = 3/5, find cos(θ).</strong>
+                <br><br><strong>Solution:</strong>
+                <br>Using sin²(θ) + cos²(θ) = 1:
+                <br>(3/5)² + cos²(θ) = 1
+                <br>9/25 + cos²(θ) = 1
+                <br>cos²(θ) = 1 - 9/25 = 16/25
+                <br>cos(θ) = ±4/5
+            </div>
+
+            <h3>Example 3: Sum Formula</h3>
+            <div class="example">
+                <strong>Find sin(75°)</strong>
+                <br><br><strong>Solution:</strong>
+                <br>75° = 45° + 30°
+                <br>sin(75°) = sin(45° + 30°)
+                <br>= sin(45°)cos(30°) + cos(45°)sin(30°)
+                <br>= (√2/2)(√3/2) + (√2/2)(1/2)
+                <br>= (√6/4) + (√2/4)
+                <br>= (√6 + √2)/4
+            </div>
+
+            <h2>7. Applications of Trigonometry</h2>
+            <ul>
+                <li><strong>Navigation:</strong> Using angles to determine direction and distance</li>
+                <li><strong>Engineering:</strong> Design of bridges, buildings, and mechanical systems</li>
+                <li><strong>Physics:</strong> Analyzing forces, waves, and oscillations</li>
+                <li><strong>Astronomy:</strong> Measuring distances to stars and planets</li>
+                <li><strong>Surveying:</strong> Measuring land and creating maps</li>
+                <li><strong>Music:</strong> Analyzing sound waves and frequencies</li>
+            </ul>
+
+            <h2>8. Radian vs Degree Measure</h2>
+            <div class="formula">
+                <strong>Conversion Formulas:</strong>
+                <br>Radians = Degrees × (π/180)
+                <br>Degrees = Radians × (180/π)
+                <br><br>Common conversions:
+                <br>180° = π radians
+                <br>90° = π/2 radians
+                <br>45° = π/4 radians
+                <br>360° = 2π radians
+            </div>
+
+            <h2>9. Practice Problems</h2>
+            <ol>
+                <li>In a right triangle, if sin(θ) = 5/13, find cos(θ) and tan(θ)</li>
+                <li>Find the exact value of cos(120°)</li>
+                <li>Simplify: sin²(x) · csc(x) · tan(x)</li>
+                <li>Verify the identity: (sin(x) + cos(x))² = 1 + 2sin(x)cos(x)</li>
+                <li>Find sin(2θ) if sin(θ) = 1/2</li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Mathematics Learning Hub. Keep learning! 📚</p>
+        </footer>
+    </div>
+</body>
+</html>

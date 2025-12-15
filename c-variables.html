@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variables & Data Types - C Programming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #e6f3ff; color: #0f172a; }
+    .container { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+    h1 { color: #123b88; }
+    h2 { color: #0f2f6e; margin-top: 30px; }
+    code { background: #f5fbff; padding: 2px 6px; border-radius: 4px; color: #c7254e; }
+    pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; }
+    pre code { color: #f8f8f2; }
+    .nav-top { text-align: center; margin-bottom: 20px; }
+    .back-btn { display: inline-block; padding: 8px 15px; margin: 5px; background: #dff1ff; color: #0b6ab8; text-decoration: none; border-radius: 4px; }
+    .back-btn:hover { background: #0b6ab8; color: white; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #cfe8ff; padding: 10px; text-align: left; }
+    th { background: #eef6ff; color: #123b88; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav-top">
+      <a href="c-programming.html" class="back-btn">← Back to C Basics Hub</a>
+    </div>
+    
+    <h1>📝 Variables & Data Types in C</h1>
+    <p>Understanding variables and data types is fundamental to programming in C. This guide will teach you everything you need to know.</p>
+
+    <h2>What is a Variable?</h2>
+    <p>A variable is a named storage location that holds a value. It has a name, a type, and a value that can change during program execution.</p>
+
+    <h2>Basic Data Types</h2>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Size (bytes)</th>
+        <th>Range</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>2 or 4</td>
+        <td>-32,768 to 32,767 (or larger)</td>
+        <td>int age = 25;</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>4</td>
+        <td>±3.4 × 10³⁸</td>
+        <td>float price = 19.99;</td>
+      </tr>
+      <tr>
+        <td>char</td>
+        <td>1</td>
+        <td>-128 to 127</td>
+        <td>char grade = 'A';</td>
+      </tr>
+      <tr>
+        <td>double</td>
+        <td>8</td>
+        <td>±1.7 × 10³⁰⁸</td>
+        <td>double pi = 3.14159;</td>
+      </tr>
+    </table>
+
+    <h2>Declaring Variables</h2>
+    <pre><code>// Syntax: datatype variableName;
+int age;
+float salary;
+char initial;
+
+// Declaration with initialization
+int count = 10;
+float temperature = 98.6;
+char gender = 'M';</code></pre>
+
+    <h2>Variable Naming Rules</h2>
+    <ul>
+      <li>Must start with a letter (A-Z, a-z) or underscore (_)</li>
+      <li>Can contain letters, digits, and underscores</li>
+      <li>Cannot contain spaces or special characters</li>
+      <li>Cannot be a C keyword (int, float, if, etc.)</li>
+      <li>Case-sensitive: age and Age are different</li>
+    </ul>
+
+    <h2>Example Program</h2>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 20;
+    float gpa = 3.85;
+    char grade = 'A';
+    
+    printf("Age: %d\n", age);
+    printf("GPA: %.2f\n", gpa);
+    printf("Grade: %c\n", grade);
+    
+    return 0;
+}</code></pre>
+
+    <h2>Related Topics</h2>
+    <div style="text-align: center;">
+      <a href="c-operators.html" class="back-btn">Next: Operators →</a>
+      <a href="c-input-output.html" class="back-btn">Input & Output</a>
+      <a href="Study resource hub.html.html" class="back-btn">Back to Hub</a>
+    </div>
+  </div>
+
+</body>
+</html>

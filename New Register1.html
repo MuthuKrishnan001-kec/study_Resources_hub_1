@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Resource Hub - Register</title>
+  <style>
+    body{margin:0;font-family:Arial,sans-serif;background:#E3F2FD;color:#0f172a}
+    .header{background:#E3F2FD;border-bottom:2px solid #0D47A1;padding:16px;text-align:center}
+    .header a{text-decoration:none;color:#0D47A1;font-weight:bold}
+    .container{max-width:500px;margin:40px auto;background:#fff;padding:24px;border-radius:8px}
+    h1{color:#0D47A1;text-align:center;margin:0 0 8px}
+    p{text-align:center;color:#666;margin:0 0 20px}
+    label{display:block;margin:16px 0 6px;color:#0D47A1;font-weight:bold}
+    input,select{width:100%;padding:10px;border:1px solid #b0bec5;border-radius:6px;font-size:14px;box-sizing:border-box}
+    .row{display:flex;gap:12px}
+    .row div{flex:1}
+    button{width:100%;padding:12px;margin-top:20px;background:#0D47A1;color:#fff;border:0;border-radius:6px;font-weight:bold;cursor:pointer}
+    .link{text-align:center;margin-top:16px}
+    .link a{color:#0D47A1;text-decoration:none;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="study resource hub login page.html">Study Resource Hub</a>
+  </div>
+
+  <div class="container">
+    <h1>Register</h1>
+    <p>Create your account</p>
+
+    <form action="register_process.php" method="post">
+      <div class="row">
+        <div>
+          <label>First Name</label>
+          <input type="text" name="firstname" placeholder="Enter first name" required>
+        </div>
+        <div>
+          <label>Last Name</label>
+          <input type="text" name="lastname" placeholder="Enter last name" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Date of Birth</label>
+          <input type="date" name="dob" required>
+        </div>
+        <div>
+          <label>Gender</label>
+          <select name="gender" required>
+            <option value="">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="name@example.com" required>
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Create a password" required>
+
+      <label>Confirm Password</label>
+      <input type="password" name="password2" placeholder="Re-enter password" required>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="link">
+      Already have an account? <a href="study resource hub login page.html">Login</a>
+    </div>
+  </div>
+</body>
+</html>

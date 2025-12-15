@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Learning Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .topic-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .topic-card h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .topic-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .topic-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .topic-card a:hover {
+            transform: scale(1.05);
+        }
+
+        .welcome-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .welcome-section p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topic-card h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 Mathematics Learning Hub</h1>
+        <p>Master the fundamentals of mathematics with our comprehensive guides</p>
+    </header>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>Welcome to Your Learning Journey!</h2>
+            <p>This interactive mathematics hub is designed to help you understand the basics of essential mathematical concepts. Each topic includes clear explanations, examples, and practice problems to strengthen your foundation.</p>
+            <p>Choose a topic below to get started:</p>
+        </div>
+
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-icon">🔢</div>
+                <h2>Matrices</h2>
+                <p>Learn the fundamentals of matrices, including operations, properties, and real-world applications.</p>
+                <a href="matrices.html">Start Learning →</a>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">📈</div>
+                <h2>Differential Calculus</h2>
+                <p>Explore derivatives, rates of change, and the mathematical foundation of calculus.</p>
+                <a href="differential.html">Start Learning →</a>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">∫</div>
+                <h2>Integration</h2>
+                <p>Understand integrals, antiderivatives, and techniques for solving integration problems.</p>
+                <a href="integration.html">Start Learning →</a>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">▲</div>
+                <h2>Trigonometry</h2>
+                <p>Master trigonometric functions, identities, and their applications in various fields.</p>
+                <a href="trigonometry.html">Start Learning →</a>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">■</div>
+                <h2>Geometry</h2>
+                <p>Discover shapes, angles, areas, volumes, and geometric theorems.</p>
+                <a href="geometry.html">Start Learning →</a>
+            </div>
+
+            <div class="topic-card">
+                <div class="topic-icon">🔤</div>
+                <h2>Algebra Basics</h2>
+                <p>Build a strong foundation with equations, variables, polynomials, and algebraic operations.</p>
+                <a href="algebra.html">Start Learning →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathematics Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

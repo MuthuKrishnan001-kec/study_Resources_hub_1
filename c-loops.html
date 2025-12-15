@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loops - C Programming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #e6f3ff; color: #0f172a; }
+    .container { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+    h1 { color: #123b88; }
+    h2 { color: #0f2f6e; margin-top: 30px; }
+    pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; }
+    .nav-top { text-align: center; margin-bottom: 20px; }
+    .back-btn { display: inline-block; padding: 8px 15px; margin: 5px; background: #dff1ff; color: #0b6ab8; text-decoration: none; border-radius: 4px; }
+    .back-btn:hover { background: #0b6ab8; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav-top">
+      <a href="c-programming.html" class="back-btn">← Back to C Basics Hub</a>
+    </div>
+    
+    <h1>🔄 Loops in C</h1>
+    <p>Loops allow you to execute a block of code multiple times. C provides three types of loops: for, while, and do-while.</p>
+
+    <h2>For Loop</h2>
+    <p>The for loop is used when you know how many times you want to repeat the code.</p>
+    <pre><code>for (initialization; condition; increment) {
+    // Code to execute
+}
+
+// Example: Print numbers 1 to 5
+for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}</code></pre>
+
+    <h2>While Loop</h2>
+    <p>The while loop continues as long as a condition is true.</p>
+    <pre><code>while (condition) {
+    // Code to execute
+}
+
+// Example: Print numbers 1 to 5
+int i = 1;
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}</code></pre>
+
+    <h2>Do-While Loop</h2>
+    <p>The do-while loop executes the code at least once, then checks the condition.</p>
+    <pre><code>do {
+    // Code to execute
+} while (condition);
+
+// Example
+int i = 1;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);</code></pre>
+
+    <h2>Nested Loops</h2>
+    <pre><code>// Print a 3x3 multiplication table
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        printf("%d ", i * j);
+    }
+    printf("\n");
+}</code></pre>
+
+    <h2>Related Topics</h2>
+    <div style="text-align: center;">
+      <a href="c-if-else.html" class="back-btn">If-Else Statements</a>
+      <a href="c-break-continue.html" class="back-btn">Break & Continue →</a>
+      <a href="Study resource hub.html.html" class="back-btn">Back to Hub</a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Styling - Study Resource Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #e6f3ff; color: #0f172a; }
+    h1 { text-align: center; color: #123b88; margin: 10px 0; }
+    h2 { text-align: center; color: #0f2f6e; margin: 8px 0; }
+    p { margin: 6px 0; }
+    ul { max-width: 900px; margin: 10px auto; padding-left: 20px; }
+    li { margin: 6px 0; }
+    a { color: #0b6ab8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back-btn { display: inline-block; margin: 10px 5px; padding: 8px 16px; background: #0b6ab8; color: white; border-radius: 6px; text-decoration: none; }
+    .back-btn:hover { background: #0b4aad; }
+    .section { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+    .nav-container { text-align: center; padding: 10px 0; }
+    .example { background: #fff; border-radius: 6px; padding: 12px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-container">
+    <a href="Study resource hub.html.html" class="back-btn">← Hub</a>
+    <a href="html-programming.html" class="back-btn">← HTML</a>
+    <a href="html-forms.html" class="back-btn">Forms →</a>
+  </div>
+
+  <h1>CSS Styling</h1>
+  <h2>Style your pages with CSS</h2>
+
+  <div class="section">
+    <h3>Overview</h3>
+    <p>CSS (Cascading Style Sheets) controls the look and layout of web pages. Learn selectors, box model, layout (flexbox, grid), and responsive design.</p>
+  </div>
+
+  <div class="section">
+    <h3>Topics Covered</h3>
+    <ul>
+      <li>Selectors: element, class, id, attribute</li>
+      <li>Box Model: margin, border, padding, content</li>
+      <li>Layout: display, position, float, flexbox, grid</li>
+      <li>Typography: font, size, line-height</li>
+      <li>Responsive Design: media queries, mobile-first</li>
+      <li>Transitions & Animations basics</li>
+    </ul>
+  </div>
+
+  <div class="section example">
+    <h4>Example: Center a box with Flexbox</h4>
+    <pre><code> .container { display:flex; align-items:center; justify-content:center; height:200px; }
+.box { width:100px; height:100px; background:#0b6ab8; }</code></pre>
+  </div>
+
+  <div class="section">
+    <h3>Learning Resources</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
+      <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools - CSS</a></li>
+      <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-container" style="margin-top:30px;">
+    <a href="html-programming.html" class="back-btn">← Previous: HTML</a>
+    <a href="html-forms.html" class="back-btn">Next: Forms →</a>
+  </div>
+
+  <p style="text-align:center; margin-top:40px;"><a href="Study resource hub.html.html" class="back-btn">← Back to Hub</a></p>
+
+</body>
+</html>

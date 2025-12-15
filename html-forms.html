@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Forms - Study Resource Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #e6f3ff; color: #0f172a; }
+    h1 { text-align: center; color: #123b88; margin: 10px 0; }
+    h2 { text-align: center; color: #0f2f6e; margin: 8px 0; }
+    p { margin: 6px 0; }
+    ul { max-width: 900px; margin: 10px auto; padding-left: 20px; }
+    li { margin: 6px 0; }
+    a { color: #0b6ab8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back-btn { display: inline-block; margin: 10px 5px; padding: 8px 16px; background: #0b6ab8; color: white; border-radius: 6px; text-decoration: none; }
+    .back-btn:hover { background: #0b4aad; }
+    .section { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+    .nav-container { text-align: center; padding: 10px 0; }
+    form { max-width: 600px; margin: 10px auto; background: #fff; padding: 12px; border-radius: 6px; }
+    label { display:block; margin:8px 0 4px; }
+    input, textarea, select { width:100%; padding:8px; border:1px solid #dfeefb; border-radius:4px; }
+  </style>
+</head>
+<body>
+
+  <div class="nav-container">
+    <a href="Study resource hub.html.html" class="back-btn">← Hub</a>
+    <a href="html-programming.html" class="back-btn">← HTML</a>
+    <a href="css-programming.html" class="back-btn">CSS →</a>
+  </div>
+
+  <h1>HTML Forms</h1>
+  <h2>Collect user input using forms</h2>
+
+  <div class="section">
+    <h3>Overview</h3>
+    <p>Forms allow users to send input to your server or client-side code. Learn inputs, labels, validation, and best practices for accessible forms.</p>
+  </div>
+
+  <div class="section">
+    <h3>Key Topics</h3>
+    <ul>
+      <li>Form structure and attributes (`action`, `method`)</li>
+      <li>Input types: text, email, password, number, checkbox, radio</li>
+      <li>Labels & accessibility</li>
+      <li>Client-side validation and HTML5 constraints</li>
+      <li>Submitting forms and handling responses</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Example Form</h3>
+    <form>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+
+      <div style="text-align:center; margin-top:10px;"><button type="submit" class="back-btn">Send</button></div>
+    </form>
+  </div>
+
+  <div class="nav-container" style="margin-top:30px;">
+    <a href="html-programming.html" class="back-btn">← Previous: HTML</a>
+    <a href="css-programming.html" class="back-btn">Next: CSS →</a>
+  </div>
+
+  <p style="text-align:center; margin-top:40px;"><a href="Study resource hub.html.html" class="back-btn">← Back to Hub</a></p>
+
+</body>
+</html>
